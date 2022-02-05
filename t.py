@@ -4,7 +4,8 @@ import requests
 from datetime import datetime
 from pytz import timezone
 
-bot = os.getenv('BOT')
+botx = os.getenv('BOT')
+bot = botx.split(";")
 
 def merge_two_dicts(x, y):
     z = x.copy()
