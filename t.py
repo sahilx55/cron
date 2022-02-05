@@ -1,8 +1,10 @@
+import os
 import threading
 import requests
 from datetime import datetime
 from pytz import timezone
-bot = ['https://google.com/', 'https://gmail.com/']
+
+bot = os.getenv('BOT')
 
 def merge_two_dicts(x, y):
     z = x.copy()
