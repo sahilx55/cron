@@ -16,11 +16,11 @@ def cronjob():
       s = datetime.now(tz).strftime("%H:%M")
       sx = datetime.strptime(s, "%H:%M")
       z ='Date : ' + datetime.now(tz).strftime("%A %d-%m-%Y") + '\nTime : ' + sx.strftime("%r")
+      print(z)
       mnb34x1 = open('response.txt', 'r')
       mnbxop1 = mnb34x1.read()
       ct1 = eval(mnbxop1)
       ct0 = {}
-      print(ct1)
       for i in range(len(bot)):
           A = requests.get(bot[i])
           alive = bot[i] + ' Bot Is Alive'
@@ -36,8 +36,8 @@ def cronjob():
             if len(ct2)!=2:
               ct2.append('Alive2')
             ct0[dead] = f"['{ct2[1]}', '{z}\n{bot[i]}\nBot Is Dead']"
+            del ct1[alive]
             l2 = merge_two_dicts(ct1, ct0)
-            del l2[alive]
             ftx2 = open("response.txt", "w")
             ftx2.write(repr(l2))
             ftx2.close()
@@ -48,8 +48,8 @@ def cronjob():
             if len(ct2)!=2:
               ct2.append('Dead2')
             ct0[alive] = f"['{ct2[1]}', '{z}\n{bot[i]}\nBot Is Alive']"
+            del ct1[dead]
             l2 = merge_two_dicts(ct1, ct0)
-            del l2[dead]
             ftx2 = open("response.txt", "w")
             ftx2.write(repr(l2))
             ftx2.close()
