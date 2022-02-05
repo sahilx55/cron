@@ -11,14 +11,14 @@ z ='Date : ' + datetime.now(tz).strftime("%A %d-%m-%Y") + '\nTime : ' + sx.strft
 
 def cronjob():
       threading.Timer(3.0, cronjob).start()
+      print(z)
       for i in range(len(bot)):
           A = requests.get(bot[i])
-          print(z)
           if not A.ok:
             print(bot[i])
             print('BOT IS DEAD')
           else:
             print(bot[i])
-            print(A)
+            print('BOT IS ALIVE')
 
 cronjob()
