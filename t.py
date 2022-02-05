@@ -16,11 +16,11 @@ def cronjob():
       s = datetime.now(tz).strftime("%H:%M")
       sx = datetime.strptime(s, "%H:%M")
       z ='Date : ' + datetime.now(tz).strftime("%A %d-%m-%Y") + '\nTime : ' + sx.strftime("%r")
-      print(z)
       mnb34x1 = open('response.txt', 'r')
       mnbxop1 = mnb34x1.read()
       ct1 = eval(mnbxop1)
       ct0 = {}
+      print(ct1)
       for i in range(len(bot)):
           A = requests.get(bot[i])
           alive = bot[i] + ' Bot Is Alive'
