@@ -91,7 +91,7 @@ def cronjob():
             ftx2c.close()
             app.send_document(chat_id=-1001184862744, document="logs.txt")
           if A.ok and alive not in ct1:
-            app.send_message(chat_id=-1001184862744, text=f'{bot[i]}\n\n💪Is Alive\n\n{z}', disable_web_page_preview=True)
+            app.send_message(chat_id=-1001184862744, text=f'{bot[i]}\n\n💪 Is Alive\n\n{z}', disable_web_page_preview=True)
             if dead not in ct1:
               ct1[dead] = "['Dead1']"
             ct2 = eval(ct1[dead].replace('\n', '\\n'))
