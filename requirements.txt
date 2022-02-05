@@ -1,3 +1,4 @@
 pyrogram
 TgCrypto
 pytz
+requests
