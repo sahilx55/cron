@@ -45,7 +45,7 @@ app = Client(
 )
 
 def cronjob():
-      threading.Timer(4.0, cronjob).start()
+      threading.Timer(5.0, cronjob).start()
       tz = timezone('Asia/Kolkata')
       s = datetime.now(tz).strftime("%H:%M")
       sx = datetime.strptime(s, "%H:%M")
