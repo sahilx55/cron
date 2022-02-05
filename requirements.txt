@@ -1,2 +1,6 @@
-requests
 pytz
+gunicorn
+requests
+aiohttp
+aiohttp-jinja2
+bs4
