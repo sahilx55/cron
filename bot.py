@@ -89,7 +89,7 @@ def cronjob():
             ftx2c = open("logs.txt", "w")
             ftx2c.write(logx)
             ftx2c.close()
-            await client.send_document(chat_id=message.chat.id, document="logs.txt")
+            client.send_document(chat_id=message.chat.id, document="logs.txt")
           if A.ok and alive not in ct1:
             app.send_message(chat_id=-1001184862744, text=f'{bot[i]} Is Alive\n\n{z}', disable_web_page_preview=True)
             if dead not in ct1:
@@ -118,7 +118,7 @@ def cronjob():
             ftx2c = open("logs.txt", "w")
             ftx2c.write(logx)
             ftx2c.close()
-            await client.send_document(chat_id=message.chat.id, document="logs.txt")
+            client.send_document(chat_id=message.chat.id, document="logs.txt")
 
 if __name__ == "__main__":
     try:
